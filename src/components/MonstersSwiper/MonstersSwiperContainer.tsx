@@ -1,9 +1,9 @@
 import React, { useContext, useState } from "react";
 
 import { MonstersContext } from "../MonsersContext/MonstersContext";
-import { MonstersSliderPresentional } from "./MonstersSliderPresentional";
+import { MonstersSwiperPresentional } from "./MonstersSwiperPresentional";
 
-export const MonstersSliderContainer = () => {
+export const MonstersSwiperContainer = () => {
   const { monsters, setMonsters } = useContext(MonstersContext);
   const [swiper, updateSwiper] = useState<any>(null);
 
@@ -21,7 +21,7 @@ export const MonstersSliderContainer = () => {
   };
 
   return (
-    <MonstersSliderPresentional
+    <MonstersSwiperPresentional
       updateSwiper={updateSwiper}
       goNext={goNext}
       goPrev={goPrev}

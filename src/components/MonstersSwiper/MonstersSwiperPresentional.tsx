@@ -6,16 +6,16 @@ import { MonsterI } from "../../apis/monstersApi";
 import "./styles.css";
 import { Monster } from "./Monster";
 
-interface MonstersSliderPresentionalProps {
+interface MonstersSwiperPresentionalProps {
   updateSwiper: any;
   goPrev: () => void;
   goNext: () => void;
   monsters: MonsterI[];
 }
 
-export const MonstersSliderPresentional = ({
+export const MonstersSwiperPresentional = ({
   monsters
-}: MonstersSliderPresentionalProps) => {
+}: MonstersSwiperPresentionalProps) => {
   const swiperParams = {
     loop: true,
     grabCursor: true,
