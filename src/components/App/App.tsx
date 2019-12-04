@@ -2,12 +2,12 @@ import React from "react";
 
 import { Nav } from "../Nav/Nav";
 import { MonstersData } from "../MonstersData/MonstersData";
+import "./styles.css";
 
 const App = () => {
   return (
-    <div>
+    <div className="app-wrapper">
       <Nav />
-
       <MonstersData />
     </div>
   );

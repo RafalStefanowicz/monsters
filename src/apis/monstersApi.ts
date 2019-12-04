@@ -1,9 +1,11 @@
+import { MONSTER_ATTRIBUTES } from "../types/MONSTER_ATTRIBUTES";
+
 export interface MonsterI {
   name: string;
   statistics: {
-    power: string;
-    danger: string;
-    frequency: string;
+    [MONSTER_ATTRIBUTES.POWER]: string;
+    [MONSTER_ATTRIBUTES.DANGER]: string;
+    [MONSTER_ATTRIBUTES.FREQUENCY]: string;
   };
   description: string;
   images: {
