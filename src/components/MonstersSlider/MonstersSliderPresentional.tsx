@@ -1,8 +1,9 @@
 import React from "react";
 import Swiper from "react-id-swiper";
 import "swiper/css/swiper.css";
-
 import { MonsterI } from "../../apis/monstersApi";
+
+import "./styles.css";
 import { Monster } from "./Monster";
 
 interface MonstersSliderPresentionalProps {
@@ -13,13 +14,9 @@ interface MonstersSliderPresentionalProps {
 }
 
 export const MonstersSliderPresentional = ({
-  updateSwiper,
-  goPrev,
-  goNext,
   monsters
 }: MonstersSliderPresentionalProps) => {
   const swiperParams = {
-    getSwiper: updateSwiper,
     loop: true,
     grabCursor: true,
     keyboard: true,
@@ -28,8 +25,9 @@ export const MonstersSliderPresentional = ({
       type: "bullets",
       clickable: true
     },
-    renderPagination: () => {
-      return <div className="swiper-pagination"></div>;
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
     }
   };
 
@@ -40,11 +38,5 @@ export const MonstersSliderPresentional = ({
       </div>
     ));
 
-  return (
-    <>
-      <Swiper {...swiperParams}>{renderMonsters()}</Swiper>
-      <button onClick={goPrev}>Prev</button>
-      <button onClick={goNext}>Next</button>
-    </>
-  );
+  return <Swiper {...swiperParams}>{renderMonsters()}</Swiper>;
 };
