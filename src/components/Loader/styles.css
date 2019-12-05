@@ -1,0 +1,30 @@
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  font-size: 24px;
+}
+
+.loader svg {
+  width: 1em;
+  height: 1em;
+  margin-right: 5px;
+  fill: #747474;
+  animation: spin 1.5s infinite linear;
+}
+
+@media (max-width: 700px) {
+  .loader {
+    font-size: 18px;
+  }
+}
