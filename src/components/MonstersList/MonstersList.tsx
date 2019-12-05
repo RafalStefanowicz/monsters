@@ -1,11 +1,12 @@
-import React from "react";
+import React, { memo } from "react";
+
 import { MonsterI } from "../../apis/monstersApi";
 
 interface MonstersListProps {
   monsters: MonsterI[];
 }
 
-export const MonstersList = ({ monsters }: MonstersListProps) => {
+const _MonstersList = ({ monsters }: MonstersListProps) => {
   const renderMonsters = () =>
     monsters.map(({ images, name, statistics }) => (
       <li key={name} className="monsters-item">
@@ -29,3 +30,9 @@ export const MonstersList = ({ monsters }: MonstersListProps) => {
     ));
   return <ul>{renderMonsters()}</ul>;
 };
+
+export const MonstersList = memo(
+  _MonstersList,
+  ({ monsters: prevMonsters }, { monsters: currentMonsters }) =>
+    prevMonsters.length === currentMonsters.length
+);
