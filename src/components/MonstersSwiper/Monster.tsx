@@ -11,9 +11,7 @@ export const Monster = ({
 }: MonsterProps) => {
   const renderStatistics = () =>
     Object.keys(statistics).map(statistic => {
-      const statisticValue =
-        Number(statistics[statistic as keyof typeof statistics]) * 100;
-
+      const statisticValue = statistics[statistic as keyof typeof statistics];
       return (
         <li key={statistic} className="statistic-item">
           <span className="statistic-label">{statistic}</span>
