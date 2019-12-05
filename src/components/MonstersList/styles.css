@@ -29,7 +29,6 @@
   font-size: 16px;
   font-weight: bold;
   max-width: 210px;
-  transition: border-color 270ms ease-in-out;
 }
 
 .monsters-filter:focus {
@@ -95,7 +94,7 @@
 .monsters-item {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   margin: 20px 0;
 }
 
@@ -104,27 +103,30 @@
 }
 
 .monster-item-name {
+  width: 250px;
+  margin-left: 60px;
   font-size: 26px;
 }
 
-.monster-item-statistic {
+.monster-statistic-item {
   font-size: 20px;
   line-height: 34px;
+  width: 140px;
 }
 
-.monster-item-statistic span:first-child {
+.monster-statistic-item span:first-child {
   margin-right: 10px;
 }
 
-.monster-item-statistic-power {
+.monster-statistic-item-power {
   color: #ff652f;
 }
 
-.monster-item-statistic-danger {
+.monster-statistic-item-danger {
   color: #ffe400;
 }
 
-.monster-item-statistic-frequency {
+.monster-statistic-item-frequency {
   color: #14a76c;
 }
 
@@ -134,7 +136,8 @@
   }
 
   .monsters-item {
-    justify-content: space-between;
+    justify-content: space-around;
+
     margin: 10px 0;
   }
 
@@ -163,10 +166,13 @@
   }
 
   .monster-item-name {
+    width: 100px;
+    margin-left: 20px;
     font-size: 20px;
   }
 
-  .monster-item-statistic {
+  .monster-statistic-item {
+    width: 110px;
     font-size: 16px;
     line-height: 22px;
   }

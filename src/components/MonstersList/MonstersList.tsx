@@ -12,16 +12,16 @@ const _MonstersList = ({ monsters }: MonstersListProps) => {
       <li key={name} className="monsters-item">
         <img src={images.thumb} alt={name} className="monster-item-image" />
         <span className="monster-item-name ">{name}</span>
-        <ul>
-          <li className="monster-item-statistic monster-item-statistic-power">
+        <ul className="monster-statistic-list">
+          <li className="monster-statistic-item monster-statistic-item-power">
             <span>Power:</span>
             <span>{statistics.power}</span>
           </li>
-          <li className="monster-item-statistic monster-item-statistic-danger">
+          <li className="monster-statistic-item monster-statistic-item-danger">
             <span>Danger:</span>
             <span>{statistics.danger}</span>
           </li>
-          <li className="monster-item-statistic monster-item-statistic-frequency ">
+          <li className="monster-statistic-item monster-statistic-item-frequency ">
             <span>Frequency:</span>
             <span>{statistics.frequency}</span>
           </li>
