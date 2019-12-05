@@ -85,7 +85,7 @@
 
 .range-label {
   width: 20%;
-  font-size: 18px;
+  font-size: 22px;
 }
 
 .range-label::first-letter {
@@ -104,11 +104,11 @@
 }
 
 .monster-item-name {
-  font-size: 24px;
+  font-size: 26px;
 }
 
 .monster-item-statistic {
-  font-size: 18px;
+  font-size: 20px;
   line-height: 34px;
 }
 
