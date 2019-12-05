@@ -1,21 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import Swiper from "react-id-swiper";
 import "swiper/css/swiper.css";
-import { MonsterI } from "../../apis/monstersApi";
 
 import "./styles.css";
 import { Monster } from "./Monster";
+import { MonstersContext } from "../MonsersContext/MonstersContext";
 
-interface MonstersSwiperPresentionalProps {
-  updateSwiper: any;
-  goPrev: () => void;
-  goNext: () => void;
-  monsters: MonsterI[];
-}
+export const MonstersSwiper = () => {
+  const { monsters } = useContext(MonstersContext);
 
-export const MonstersSwiperPresentional = ({
-  monsters
-}: MonstersSwiperPresentionalProps) => {
   const swiperParams = {
     loop: true,
     grabCursor: true,
