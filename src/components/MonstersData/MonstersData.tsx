@@ -4,6 +4,7 @@ import { fetchMonstersDetails, MonsterI } from "../../apis/monstersApi";
 import { Loader } from "../Loader/Loader";
 import { Page } from "../Page/Page";
 import { MonstersContext } from "../MonsersContext/MonstersContext";
+import { makeIntegerStatistics } from "../../utility/makeIntegerStatistics";
 
 export const MonstersData = () => {
   const [monsters, setMonsters] = useState<MonsterI[]>([]);
@@ -11,7 +12,7 @@ export const MonstersData = () => {
   useEffect(() => {
     (async () => {
       const monsters = await fetchMonstersDetails();
-      setMonsters(monsters);
+      setMonsters(makeIntegerStatistics(monsters));
     })();
   }, []);
 
