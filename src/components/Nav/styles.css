@@ -1,12 +1,12 @@
 .nav {
-  display: block;
-  margin: 30px 0;
+  display: flex;
+  margin: 20px 0;
 }
 
 .nav-link {
   font-size: 22px;
-  border: 2px solid #494e61;
-  padding: 10px 20px;
+  border: 2px solid #747474a8;
+  padding: 8px 20px;
   display: inline-block;
 }
 
@@ -17,4 +17,19 @@
 .nav-link.active {
   color: #14a76c;
   border: 2px solid #14a76c;
+}
+
+@media (max-width: 700px) {
+  .nav {
+    margin: 10px 0;
+  }
+
+  .nav-link {
+    font-size: 16px;
+    padding: 4px 8px;
+  }
+
+  .nav-link + .nav-link {
+    margin-left: 10px;
+  }
 }
