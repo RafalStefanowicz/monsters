@@ -1,0 +1,177 @@
+.monsters-range-container {
+  margin-top: 12px;
+}
+.monsters-filter-wrapper {
+  position: relative;
+}
+
+.monsters-filter-inner {
+  position: absolute;
+  top: -70px;
+  right: -6px;
+}
+
+.monsters-filter-icon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+
+.monsters-filter {
+  display: inline-block;
+  border: 2px solid #747474a8;
+  border-radius: 50px;
+  padding: 8px 20px 8px 50px;
+  font-size: 16px;
+  font-weight: bold;
+  max-width: 210px;
+  transition: border-color 270ms ease-in-out;
+}
+
+.monsters-filter:focus {
+  outline-width: 0;
+  border-color: #747474;
+}
+
+.monsters-filter::placeholder {
+  color: #747474;
+}
+
+.input-range {
+  margin: 20px 0;
+  width: 80%;
+}
+
+.input-range__label--max,
+.input-range__label--min {
+  display: none;
+}
+
+.input-range--power .input-range__track--active {
+  background: #ff652f;
+}
+
+.input-range--power .input-range__slider {
+  background: #ff652f;
+  border-color: #ff652f;
+}
+
+.input-range--danger .input-range__track--active {
+  background: #ffe400;
+}
+
+.input-range--danger .input-range__slider {
+  background: #ffe400;
+  border-color: #ffe400;
+}
+
+.input-range--frequency .input-range__track--active {
+  background: #14a76c;
+}
+
+.input-range--frequency .input-range__slider {
+  background: #14a76c;
+  border-color: #14a76c;
+}
+
+.range-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.range-label {
+  width: 20%;
+  font-size: 18px;
+}
+
+.range-label::first-letter {
+  text-transform: uppercase;
+}
+
+.monsters-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.monster-item-image {
+  height: 120px;
+}
+
+.monster-item-name {
+  font-size: 24px;
+}
+
+.monster-item-statistic {
+  font-size: 18px;
+  line-height: 34px;
+}
+
+.monster-item-statistic span:first-child {
+  margin-right: 10px;
+}
+
+.monster-item-statistic-power {
+  color: #ff652f;
+}
+
+.monster-item-statistic-danger {
+  color: #ffe400;
+}
+
+.monster-item-statistic-frequency {
+  color: #14a76c;
+}
+
+@media (max-width: 700px) {
+  .monsters-filter-inner {
+    position: static;
+  }
+
+  .monsters-item {
+    justify-content: space-between;
+    margin: 10px 0;
+  }
+
+  .range-label {
+    width: 35%;
+    font-size: 16px;
+  }
+
+  .input-range {
+    width: 65%;
+    margin: 12px;
+  }
+
+  .monsters-filter {
+    max-width: 160px;
+    padding: 4px 8px 4px 34px;
+    font-size: 14px;
+  }
+
+  .monsters-filter-icon {
+    left: 10px;
+  }
+
+  .monster-item-image {
+    height: 60px;
+  }
+
+  .monster-item-name {
+    font-size: 20px;
+  }
+
+  .monster-item-statistic {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .monsters-item {
+    margin: 16px 0;
+  }
+}

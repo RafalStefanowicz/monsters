@@ -12,15 +12,15 @@ export const MonstersList = ({ monsters }: MonstersListProps) => {
         <img src={images.thumb} alt={name} className="monster-item-image" />
         <span className="monster-item-name ">{name}</span>
         <ul>
-          <li className="monster-item-statistic-item monster-item-statistic-item-power">
+          <li className="monster-item-statistic monster-item-statistic-power">
             <span>Power:</span>
             <span>{statistics.power}</span>
           </li>
-          <li className="monster-item-statistic-item monster-item-statistic-item-danger">
+          <li className="monster-item-statistic monster-item-statistic-danger">
             <span>Danger:</span>
             <span>{statistics.danger}</span>
           </li>
-          <li className="monster-item-statistic-item monster-item-statistic-item-frequency ">
+          <li className="monster-item-statistic monster-item-statistic-frequency ">
             <span>Frequency:</span>
             <span>{statistics.frequency}</span>
           </li>
