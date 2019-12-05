@@ -11,6 +11,12 @@
 .swiper-button-next,
 .swiper-button-prev {
   color: #14a76c;
+  opacity: 0.5;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  opacity: 1;
 }
 
 .swiper-pagination-wrap {
@@ -28,6 +34,12 @@
   width: 14px;
   height: 14px;
 }
+
+.swiper-pagination-bullet:hover {
+  opacity: 1;
+  background-color: #14a76c;
+}
+
 .swiper-pagination-bullet-active {
   background-color: #14a76c;
 }
