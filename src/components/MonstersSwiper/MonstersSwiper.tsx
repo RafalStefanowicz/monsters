@@ -31,5 +31,9 @@ export const MonstersSwiper = () => {
       </div>
     ));
 
-  return <Swiper {...swiperParams}>{renderMonsters()}</Swiper>;
+  return (
+    <div className="swiper-wrapper">
+      <Swiper {...swiperParams}>{renderMonsters()}</Swiper>
+    </div>
+  );
 };

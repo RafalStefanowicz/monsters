@@ -26,7 +26,7 @@ export const Monster = ({
     });
 
   return (
-    <div className="monster-wrapper">
+    <div className="monster-container">
       <h3 className="monster-name">{name}</h3>
       <img src={images.big} alt={name} className="monster-image"></img>
       <p className="monster-description">{description}</p>

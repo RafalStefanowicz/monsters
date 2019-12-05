@@ -1,0 +1,149 @@
+.swiper-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* overwrite plugin styles */
+* {
+  --swiper-navigation-size: 80px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #14a76c;
+}
+
+.swiper-pagination-wrap {
+  position: relative;
+}
+
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-container-horizontal > .swiper-pagination-bullets {
+  cursor: pointer;
+  bottom: 0px;
+}
+
+.swiper-pagination-bullet {
+  width: 14px;
+  height: 14px;
+}
+.swiper-pagination-bullet-active {
+  background-color: #14a76c;
+}
+
+.swiper-container {
+  padding: 40px 0;
+}
+
+/* ------------------------ */
+
+.monster-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 30px;
+  border: 2px solid #000;
+  border-radius: 30px;
+}
+
+.monster-name {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.monster-image {
+  height: 240px;
+  display: block;
+  margin: 0 auto;
+}
+
+.monster-description {
+  font-size: 16px;
+  margin: 10px 0 20px;
+}
+
+.statistic-item {
+  display: flex;
+  margin: 5px 0;
+}
+
+.statistic-label {
+  width: 20%;
+  font-size: 18px;
+}
+
+.statistic-label::first-letter {
+  text-transform: uppercase;
+}
+
+.statistic-value-wrapper {
+  width: 80%;
+  border: 2px solid;
+}
+
+.statistic-value {
+  height: 100%;
+}
+
+.statistic-value-power {
+  background-color: #ff652f;
+}
+
+.statistic-value-danger {
+  background-color: #ffe400;
+}
+
+.statistic-value-frequency {
+  background-color: #14a76c;
+}
+
+@media (max-width: 800px) {
+  .statistic-value-wrapper {
+    width: 70%;
+  }
+
+  .statistic-label {
+    width: 30%;
+  }
+
+  .monster-image {
+    height: 150px;
+  }
+
+  .monster-container {
+    max-width: 450px;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 610px) {
+  .monster-name {
+    font-size: 20px;
+    margin-bottom: 4px;
+  }
+
+  .statistic-label {
+    font-size: 16px;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
+
+  .monster-container {
+    max-width: 100%;
+  }
+
+  .statistic-value-wrapper {
+    width: 60%;
+  }
+
+  .statistic-label {
+    width: 40%;
+  }
+}
